@@ -1,0 +1,163 @@
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #f4f4f4;
+}
+
+h1 {
+    margin-top: 20px;
+    font-size: 2rem;
+}
+
+.search-container {
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+}
+
+.search-container input {
+    width: 300px;
+    padding: 10px;
+    font-size: 1rem;
+}
+
+.search-container button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+ol {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr); 
+    gap: 20px;
+    width: 90%;
+    max-width: 1200px;
+    padding: 0;
+    margin: 20px auto;
+    list-style: none;
+}
+
+li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    cursor: pointer;
+}
+
+li img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+li .product-info h2 {
+    margin: 10px 0;
+    font-size: 1.2rem;
+    color: #333;
+}
+
+li .product-info p {
+    margin: 5px 0 0;
+    font-size: 1rem;
+    color: #666;
+}
+
+.hidden {
+    display: none;
+}
+
+#productDetails {
+    width: 90%;
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#productDetails img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    border-radius: 10px;
+}
+
+#productDetails h2 {
+    margin: 20px 0 10px;
+}
+
+#productDetails p {
+    margin: 5px 0;
+}
+
+#backButton {
+    margin-bottom: 20px;
+    padding: 10px 20px;
+    cursor: pointer;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+
+
+
+@media only screen and (max-width: 600px) {
+    ol {
+        grid-template-columns: repeat(1, 1fr); 
+    }
+
+    li img {
+        width: 100px;
+        height: 100px;
+    }
+
+    li .product-info h2 {
+        font-size: 1rem;
+    }
+}
+
+
+@media only screen and (max-width: 900px) {
+    ol {
+        grid-template-columns: repeat(2, 1fr); 
+    }
+
+    li img {
+        width: 120px;
+        height: 120px;
+    }
+
+    li .product-info h2 {
+        font-size: 1.1rem;
+    }
+}
+
+
+@media only screen and (min-width: 901px) {
+    ol {
+        grid-template-columns: repeat(4, 1fr); 
+    }
+
+    li img {
+        width: 150px;
+        height: 150px;
+    }
+}
